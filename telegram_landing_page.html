@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join BALA JI Telegram Channel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            overflow: hidden;
+        }
+
+        /* आकर्षक ग्लासमोर्फिज़्म कार्ड इफेक्ट */
+        .card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px 30px;
+            border-radius: 24px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 
+                        0 0 50px rgba(0, 229, 255, 0.1);
+        }
+
+        .subtitle {
+            color: #00e5ff;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .title {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #ffffff, #e2e8f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .description {
+            color: #94a3b8;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* चमकता हुआ लाइव टाइमर */
+        .timer-container {
+            margin-bottom: 35px;
+        }
+
+        .timer-number {
+            font-size: 72px;
+            font-weight: 800;
+            color: #00f2fe;
+            line-height: 1;
+            text-shadow: 0 0 20px rgba(0, 242, 254, 0.6);
+            animation: pulse 1s infinite alternate;
+        }
+
+        .timer-label {
+            color: #64748b;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+
+        /* अट्रैक्टिव ग्रेडिएंट बटन */
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 16px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #0f172a;
+            background: linear-gradient(45deg, #00f2fe 0%, #4facfe 100%);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0, 242, 254, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(0, 242, 254, 0.5);
+            background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .btn:active {
+            transform: translateY(-1px);
+        }
+
+        @keyframes pulse {
+            from { transform: scale(1); text-shadow: 0 0 20px rgba(0, 242, 254, 0.6); }
+            to { transform: scale(1.05); text-shadow: 0 0 35px rgba(0, 242, 254, 0.9); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="subtitle">Telegram Channel</div>
+        <div class="title">BALA JI</div>
+        <p class="description">चैनल तक तुरंत पहुँचने के लिए नीचे दिए गए बटन पर टैप करें। टाइमर खत्म होने से पहले जुड़ें।</p>
+        
+        <div class="timer-container">
+            <div id="countdown" class="timer-number">10</div>
+            <div class="timer-label">Seconds Left</div>
+        </div>
+
+        <!-- आपका टेलीग्राम लिंक यहाँ जोड़ा गया है -->
+        <a href="https://t.me/+7u1jDWdkaX44YzBl" id="tg-link" class="btn">Join Telegram</a>
+    </div>
+
+    <script>
+        let timeLeft = 10;
+        const countdownElement = document.getElementById('countdown');
+        const targetUrl = "https://t.me/+7u1jDWdkaX44YzBl";
+
+        const timer = setInterval(() => {
+            timeLeft--;
+            countdownElement.textContent = timeLeft;
+
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                // टाइमर पूरा होते ही अपने आप टेलीग्राम पर रीडायरेक्ट कर देगा
+                window.location.href = targetUrl;
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>
